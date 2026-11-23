@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philippine History Project</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background-color: #f8efd9;
+    color: #493728;
+}
+
+/* HEADER */
+header {
+    background-color: #a77b54;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    border-bottom: 5px solid #745033;
+}
+
+header h1 {
+    font-size: 35px;
+    margin: 5px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #e8d3ad;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+nav button {
+    background-color: #a77b54;
+    color: white;
+    border: 2px solid #745033;
+    padding: 10px 16px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+nav button:hover {
+    background-color: #745033;
+}
+
+/* HOME */
+.hero {
+    text-align: center;
+    padding: 55px 20px;
+    background-color: #f1dfbd;
+    border-bottom: 3px dashed #b18b61;
+}
+
+.hero h2 {
+    font-size: 30px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.explore {
+    background-color: #745033;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* CONTENT */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fffaf0;
+    border: 2px solid #b18b61;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 4px 4px 0px #d6bc96;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.emoji {
+    font-size: 55px;
+}
+
+.card h3 {
+    font-size: 21px;
+}
+
+.card button {
+    background-color: #a77b54;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* PERIOD PAGES */
+.page {
+    display: none;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fffaf0;
+    padding: 25px;
+    border: 2px solid #b18b61;
+    border-radius: 12px;
+    min-height: 400px;
+    box-shadow: 5px 5px 0px #d6bc96;
+}
+
+.page h2 {
+    text-align: center;
+    border-bottom: 2px dashed #b18b61;
+    padding-bottom: 15px;
+}
+
+.back {
+    background-color: #745033;
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.empty {
+    margin-top: 30px;
+    padding: 55px 15px;
+    border: 2px dashed #c5a77e;
+    border-radius: 10px;
+    text-align: center;
+    color: #a18b70;
+}
+
+/* FOOTER */
+footer {
+    background-color: #a77b54;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+@media(max-width: 600px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav button {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MGA PANGYAYARI SA PANAHON NG PANANAKOP NG ESPANYA, AMERIKA, AT HAPON</h1>
+    
+</header>
+
+<nav>
+    
+    <button onclick="showPage('spanish')">Espanya</button>
+    <button onclick="showPage('american')">Amerika</button>
+    <button onclick="showPage('japanese')">Hapon</button>
+</nav>
+
+<!-- HOME PAGE -->
+<section id="home" class="page" style="display:block;">
+
+ 
+
+    
+
+            <div class="card">
+                <div class="emoji">🇪🇸</div>
+                <h3>PANANAKOP NG ESPANYA</h3>
+                <p>Tungkol sa Pananakop ng mga Espanyol.</p>
+                <button onclick="showPage('spanish')">Silipin</button>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🇺🇸</div>
+                <h3>PANANAKOP NG AMERIKA</h3>
+                <p>Tungkol sa Pananakop ng mga Amerikano.</p>
+                <button onclick="showPage('american')">Silipin</button>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🇯🇵</div>
+                <h3>PANANAKOP NG HAPON</h3>
+                <p>Tungkol sa Pananakop ng mga Hapones.</p>
+                <button onclick="showPage('japanese')">Silipin</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="spanish" class="page">
+    <button class="back" onclick="showPage('home')">← Back</button>
+    <h2>🏰 PANANAKOP NG ESPANYA(1565-1898)</h2>
+
+    <div class="empty">
+        <h3>📌 333 Taong Sinakop</h3>
+        <b>Pangunahing Impormasyon:</b>
+        <p>
+•Noong 1521, narating ng mga Espanyol ang Pilipinas sa pangunguna ni Ferdinand Magellan.
+</p>
+<p>
+•Noong 1565, nagsimula ang tuluyang pananakop sa pangunguna ni Miguel López de Legazpi.
+</p>
+<p>
+•Pangunahing layunin: Palakasin ang kapangyarihan ng Espanya at palaganapin ang Kristiyanismo.
+</p>
+<b>Mahahalagang institusyon ng pamahalaan:</b>
+<p>•Gobernador-Heneral – pinakamataas na opisyal sa Pilipinas.</p>
+<p>•Royal Audiencia – pinakamataas na hukuman.</p>
+<p>•Alcalde-Mayor – namamahala sa probinsya.</p>
+<p>•Gobernadorcillo – namamahala sa bayan.</p>
+<p>•Ayuntamiento – pamahalaang lungsod o munisipyo.</p>
+<p>•Encomienda – sistemang nagbibigay ng lupa at karapatang mangolekta ng buwis.</p>
+<b>Mahahalagang sistemang pang-ekonomiya:</b>
+<p>•Polo y Servicio – sapilitang paggawa ng kalalakihang edad 16–60.</p>
+<p>•Tributo – buwis na ipinapataw sa mga Pilipino.</p>
+<p>•Kalakalang Galyon – kalakalan sa pagitan ng Pilipinas, Mexico at Espanya.</p>
+<p>•Monopolyo – kontrol ng pamahalaan sa produksyon at bentahan ng produkto.</p>
+<b>Pag-usbong ng kamalayang Pilipino:</b>
+<p>•José Rizal – Noli Me Tangere at El Filibusterismo.</p>
+<p>•Graciano López Jaena – mga artikulo sa La Solidaridad.</p>
+<p>•Marcelo H. del Pilar – mga akdang tumutuligsa sa pang-aabuso.</p>
+<p>•Katipunan (1892) – lihim na samahang nagpasimula ng Himagsikang 1896.</p>
+<strong>Tandaan: Ang pang-aabuso, diskriminasyon, at kawalan ng kalayaan ang nagbigay-daan sa pag-usbong ng damdaming makabayan.</strong>
+    </div>
+</section>
+
+
+<section id="american" class="page">
+    <button class="back" onclick="showPage('home')">← Back</button>
+    <h2>📜 PANANAKOP NG AMERIKA(1898-1946)</h2>
+    
+    <div class="empty">  
+        <h3>📌 48 Taong Sinakop</h3>
+        <b>Pangunahing Impormasyon:</b>
+        <p>•Nagsimula noong 1898 matapos ang Digmaang Espanyol-Amerikano.</p>
+        <p>•Natapos sa pagkakaloob ng kalayaan noong 1946.</p>
+        <p>•Nagpakilala ng mga reporma sa pamahalaan, edukasyon at lipunan.</p>
+        <b>Mahahalagang pangyayari:</b>
+        <p>•1898 - Kasunduan sa Paris – ipinasa ng Espanya ang Pilipinas sa Amerika kapalit ng $20 milyon.</p>
+        <p>•1899–1902 - Digmaang Pilipino-Amerikano.</p>
+        <p>•1901 - Pagdating ng Thomasites.</p>
+        <p>•1916 - Jones Law – mas malaking pagkakataon para sa sariling pamamahala.</p>
+        <p>•1934 - Tydings-McDuffie Act – paghahanda sa kalayaan.</p>
+        <p>•1935 - Pagkakatatag ng Commonwealth sa ilalim ni Manuel L. Quezon.</p>
+        <p>•1946 Pagkakaloob ng kalayaan sa Pilipinas.</p>
+        <b>Iba pang pagbabago:</b>
+        <p>•Lumaganap ang kulturang Amerikano.</p>
+        <p>•Umunlad ang transportasyon at komunikasyon.</p>
+        <p>•Nagtatag ng mga pampublikong paaralan at bagong institusyon.</p>
+        <b>Mahahalagang kababaihan:</b>
+        <p>•Concepcion Felix de Calderón – nagtatag ng Asociación Feminista Filipina noong 1905.</p>
+        <p>•Pura Villanueva Kalaw – nagsulong ng karapatang bumoto ng kababaihan.</p>
+        <p>•Rosa Sevilla de Alvero – nagtatag ng Instituto de Mujeres.</p>
+        <p>•Encarnacion Alzona – unang Filipina na nakapagtapos ng doctorate sa kasaysayan.</p>
+        <strong>Tandaan: Pinalawak ng mga Amerikano ang edukasyon at oportunidad ng kababaihan, ngunit nanatili ang diskriminasyon.</strong>
+    </div>
+</section>
+
+
+<section id="japanese" class="page">
+    <button class="back" onclick="showPage('home')">← Back</button>
+    <h2>⛩️ PANANAKOP NG HAPON(1941-1945)</h2>
+
+    <div class="empty">
+        <h3>📌 3 Taong Sinakop</h3>
+        <b>Pangunahing Impormasyon:</b>
+        <p>•Nagsimula ang pananakop noong 1941 kasabay ng Ikalawang Digmaang Pandaigdig.</p>
+        <p>•Natapos noong 1945.</p>
+        <p>•Layunin ng mga Hapones na kontrolin ang pamahalaan, ekonomiya at kultura ng Pilipinas</p>
+        <b>Kalagayan ng mga Pilipino:</b>
+        <p>•Lipunan - Kakulangan sa pagkain at pangunahing pangangailangan.</p>
+        <p>•Politika - Nagtatag ng Puppet Government.</p>
+        <p>•Simbahan - Nilimitahan ang mga gawaing panrelihiyon.</p>
+        <p>•Edukasyon - Nihonggo ang ginamit bilang wikang panturo sa halip na Ingles.</p>
+        <p>•Ekonomiya Bumagsak ang ekonomiya at maraming nawalan ng trabaho.</p>
+        <p>•Kalakalan Kontrolado ng Hapones ang presyo at pamamahagi ng produkto.</p>
+        <b>Mahahalagang termino:</b>
+        <p>•Puppet Government – pamahalaang may sariling pinuno ngunit kontrolado ng dayuhan.</p>
+        <p>•KALIBAPI – nag-iisang partidong pampolitika sa ilalim ng Hapones.</p>
+        <p>•Rationing – kontroladong pamamahagi ng pagkain at suplay.</p>
+        <p>•Mickey Mouse Money – perang Hapones na mabilis nawalan ng halaga.</p>
+        <p>•Black Market – palihim na pamilihan.</p>
+        <p>•Labor Conscription – sapilitang paggawa.</p>
+        <p>•Comfort Women – mga babaeng sapilitang ginawang alipin sa seksuwal.</p>
+        <b>Papel ng kababaihan at kabataan:</b>
+        <p>•Kababaihan – nag-alaga ng sugatang gerilya, nagtago ng pagkain at naghatid ng impormasyon.</p>
+        <p>•Kabataan – nagsilbing courier o tagapagdala ng lihim na mensahe, armas at suplay.</p>
+        <b>Panitikan at paglaban:</b>
+        <p>•Underground Newspapers – The Liberator, Free Philippines, at Kalayaan.</p>
+        <p>•Gumamit ng tula, maikling kuwento, awit at dula upang ipahayag ang damdaming makabayan.</p>
+        <p>Lumaganap ang mga kilusang gerilya laban sa mga Hapones.</p>
+        <strong>Tandaan: Ang karahasan, kagutuman, at pang-aabuso sa panahon ng Hapones ang nagpatibay sa pagkakaisa, katapangan, at damdaming makabayan ng mga Pilipino upang ipaglaban ang kalayaan.</strong>
+    </div>
+</section>
+
+<footer>
+    <p>By: Jensen Kian M. Dasco</p>
+</footer>
+
+<script>
+function showPage(id) {
+    let pages = document.querySelectorAll('.page');
+
+    pages.forEach(function(page) {
+        page.style.display = 'none';
+    });
+
+    document.getElementById(id).style.display = 'block';
+
+    window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
